@@ -18,9 +18,9 @@ class RejalarRuyxat extends StatelessWidget {
       children: [
         ListView.builder(
           shrinkWrap: true,
-          itemCount: rejalar.length,
+          itemCount: rejalar.where((element) => !element.bajarildi).toList().length,
           itemBuilder: (ctx, index) {
-            return Reja(rejalar[index], bajarildiDebBelgilash, rejaniUchirish);
+            return Reja(rejalar.where((element) => !element.bajarildi).toList()[index], bajarildiDebBelgilash, rejaniUchirish);
           },
         ),
         const SizedBox(height: 16,),

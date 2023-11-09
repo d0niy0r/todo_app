@@ -12,7 +12,7 @@ class Reja extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: EdgeInsets.all(6),
+      contentPadding: const EdgeInsets.all(6),
       leading: IconButton(
         onPressed: () {
           bejarildiDebBelglilash(reja.id);
